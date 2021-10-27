@@ -33,7 +33,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group('', ['namespace' => 'auth'], function() {
     Route::post('/logout', 'LogoutController@logout')->name('logout');
     Route::get('/login', 'AuthController@index')->name('login');
-    Route::post('/login', 'AuthController@login')->name('auth.login');
+    Route::post('/login', 'AuthController@login');
 
 //    Route::group('password', ['namespace' => 'password'], function() {
 //        Route::get('/reset', 'PasswordController@forgot')->name('admin.auth.password.forgot');

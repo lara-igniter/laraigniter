@@ -8,7 +8,7 @@
                     <div class="card-header">{{ lang('login_heading') }}</div>
 
                     <div class="card-body">
-                        {!! form_open(route('auth.login')) !!}
+                        {!! form_open('login') !!}
 
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">{{ lang('login_identity_label') }}</label>
