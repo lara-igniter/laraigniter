@@ -296,7 +296,7 @@ $config['log_date_format'] = 'Y-m-d H:i:s';
 | application/views/errors/ directory.  Use a full server path with trailing slash.
 |
 */
-$config['error_views_path'] = '';
+$config['error_views_path'] = FCPATH . 'resources/views/errors/';
 
 /*
 |--------------------------------------------------------------------------
@@ -307,7 +307,7 @@ $config['error_views_path'] = '';
 | application/cache/ directory.  Use a full server path with trailing slash.
 |
 */
-$config['cache_path'] = '';
+$config['cache_path'] = FCPATH . 'storage/framework/sessions/';
 
 /*
 |--------------------------------------------------------------------------
