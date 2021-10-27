@@ -23,7 +23,7 @@ Route::get('/', function () {
 });
 
 Route::set('404_override', function () {
-    trigger_404();
+    show_404();
 });
 
 Route::set('translate_uri_dashes', false);
