@@ -13,8 +13,7 @@
 		"yidas/codeigniter-psr4-autoload": "^2.0"
 	},
 	"require-dev": {
-		"mikey179/vfsstream": "1.1.*",
-		"phpstan/phpstan": "^0.12.99"
+		"mikey179/vfsstream": "1.1.*"
 	},
     "autoload": {
         "psr-4": {
