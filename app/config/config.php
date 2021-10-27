@@ -307,7 +307,7 @@ $config['error_views_path'] = FCPATH . 'resources/views/errors/';
 | application/cache/ directory.  Use a full server path with trailing slash.
 |
 */
-$config['cache_path'] = FCPATH . 'storage/framework/sessions/';
+$config['cache_path'] = FCPATH . 'storage/framework/cache/';
 
 /*
 |--------------------------------------------------------------------------
@@ -384,7 +384,7 @@ $config['encryption_key'] = '';
 $config['sess_driver'] = 'files';
 $config['sess_cookie_name'] = 'ci_session';
 $config['sess_expiration'] = 86400;
-$config['sess_save_path'] = null;
+$config['sess_save_path'] = FCPATH . 'storage/framework/sessions/';;
 $config['sess_match_ip'] = false;
 $config['sess_time_to_update'] = 86400;
 $config['sess_regenerate_destroy'] = false;
