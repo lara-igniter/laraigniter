@@ -1,0 +1,29 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2021-10-26 15:03:55 --> 404 Page Not Found: /index
+ERROR - 2021-10-26 15:04:01 --> 404 Page Not Found: /index
+ERROR - 2021-10-26 15:07:03 --> 404 Page Not Found: /index
+ERROR - 2021-10-26 15:11:53 --> Severity: Warning --> require_once(C:/laragon/www/laraigniter/vendor/ivantcholakov/codeigniter-phpmailer/libraries/MY_Email.php): failed to open stream: No such file or directory C:\laragon\www\laraigniter\app\libraries\MY_Email.php 5
+ERROR - 2021-10-26 15:11:53 --> Severity: Compile Error --> require_once(): Failed opening required 'C:/laragon/www/laraigniter/vendor/ivantcholakov/codeigniter-phpmailer/libraries/MY_Email.php' (include_path='.;C:/laragon/etc/php/pear') C:\laragon\www\laraigniter\app\libraries\MY_Email.php 5
+ERROR - 2021-10-26 15:12:33 --> Severity: Warning --> require_once(C:/laragon/www/laraigniter/vendor/ivantcholakov/codeigniter-phpmailer/libraries/MY_Email.php): failed to open stream: No such file or directory C:\laragon\www\laraigniter\app\libraries\MY_Email.php 5
+ERROR - 2021-10-26 15:12:33 --> Severity: Compile Error --> require_once(): Failed opening required 'C:/laragon/www/laraigniter/vendor/ivantcholakov/codeigniter-phpmailer/libraries/MY_Email.php' (include_path='.;C:/laragon/etc/php/pear') C:\laragon\www\laraigniter\app\libraries\MY_Email.php 5
+ERROR - 2021-10-26 15:12:57 --> Severity: Warning --> require_once(C:/laragon/www/laraigniter/vendor/ivantcholakov/codeigniter-phpmailer/libraries/MY_Email.php): failed to open stream: No such file or directory C:\laragon\www\laraigniter\app\libraries\MY_Email.php 5
+ERROR - 2021-10-26 15:12:57 --> Severity: Compile Error --> require_once(): Failed opening required 'C:/laragon/www/laraigniter/vendor/ivantcholakov/codeigniter-phpmailer/libraries/MY_Email.php' (include_path='.;C:/laragon/etc/php/pear') C:\laragon\www\laraigniter\app\libraries\MY_Email.php 5
+ERROR - 2021-10-26 15:14:04 --> 404 Page Not Found: 
+ERROR - 2021-10-26 15:14:04 --> 404 Page Not Found: 
+ERROR - 2021-10-26 15:14:27 --> Severity: error --> Exception: View [layouts.auth] not found. (View: C:\laragon\www\laraigniter\resources\views\auth\login.blade.php) C:\laragon\www\laraigniter\vendor\xiaoler\blade\src\FileViewFinder.php 137
+ERROR - 2021-10-26 15:53:05 --> Severity: error --> Exception: View [layouts.app] not found. (View: C:\laragon\www\laraigniter\resources\views\auth\login.blade.php) C:\laragon\www\laraigniter\vendor\xiaoler\blade\src\FileViewFinder.php 137
+ERROR - 2021-10-26 15:53:37 --> Severity: error --> Exception: Class 'Symfony\Component\Debug\Exception\FatalThrowableError' not found C:\laragon\www\laraigniter\vendor\xiaoler\blade\src\Engines\PhpEngine.php 46
+ERROR - 2021-10-26 15:56:52 --> Severity: error --> Exception: Class 'Symfony\Component\Debug\Exception\FatalThrowableError' not found C:\laragon\www\laraigniter\vendor\xiaoler\blade\src\Engines\PhpEngine.php 46
+ERROR - 2021-10-26 18:21:35 --> Severity: error --> Exception: Class 'Symfony\Component\Debug\Exception\FatalThrowableError' not found C:\laragon\www\laraigniter\vendor\xiaoler\blade\src\Engines\PhpEngine.php 46
+ERROR - 2021-10-26 18:28:38 --> Severity: error --> Exception: Class 'Symfony\Component\Debug\Exception\FatalThrowableError' not found C:\laragon\www\laraigniter\vendor\xiaoler\blade\src\Engines\PhpEngine.php 46
+ERROR - 2021-10-26 18:29:57 --> Severity: error --> Exception: Class 'Symfony\Component\Debug\Exception\FatalThrowableError' not found C:\laragon\www\laraigniter\vendor\xiaoler\blade\src\Engines\PhpEngine.php 46
+ERROR - 2021-10-26 18:41:37 --> Severity: error --> Exception: Class 'Symfony\Component\Debug\Exception\FatalThrowableError' not found C:\laragon\www\laraigniter\vendor\xiaoler\blade\src\Engines\PhpEngine.php 46
+ERROR - 2021-10-26 18:58:09 --> Not Found: Vendor/luthier
+ERROR - 2021-10-26 18:59:23 --> Query error: Unknown column 'group_id' in 'field list' - Invalid query: INSERT INTO `li_users` (`group_id`, `ip_address`, `username`, `password`, `email`, `activation_code`, `forgotten_password_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES (1, '127.0.0.1', 'administrator', '$2y$08$200Z6ZZbp3RAEXoaWcMA6uJOFicwNZaqk4oDhqTUiFXFe63MG.Daa', 'admin@laraigniter.io', '', NULL, '1268889823', '1268889823', '1', 'George', 'Tsachrelias', 'Silktech', '2610600785')
+ERROR - 2021-10-26 19:00:03 --> Query error: Table 'laraigniter.li_groups' doesn't exist - Invalid query: INSERT INTO `li_groups` (`name`, `description`) VALUES ('admin', 'Administrator')
+ERROR - 2021-10-26 19:00:27 --> Query error: Table 'laraigniter.li_groups' doesn't exist - Invalid query: INSERT INTO `li_groups` (`name`, `description`) VALUES ('admin', 'Administrator')
+ERROR - 2021-10-26 19:03:08 --> Query error: Unknown column 'group_id' in 'field list' - Invalid query: INSERT INTO `li_users` (`group_id`, `ip_address`, `username`, `password`, `email`, `activation_code`, `forgotten_password_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES (1, '127.0.0.1', 'administrator', '$2y$08$200Z6ZZbp3RAEXoaWcMA6uJOFicwNZaqk4oDhqTUiFXFe63MG.Daa', 'admin@laraigniter.io', '', NULL, '1268889823', '1268889823', '1', 'George', 'Tsachrelias', 'Silktech', '2610600785')
+ERROR - 2021-10-26 19:04:45 --> Severity: error --> Exception:  C:\laragon\www\laraigniter\vendor\luthier\luthier\src\RouteBuilder.php 391
+ERROR - 2021-10-26 19:04:57 --> Severity: error --> Exception:  (View: C:\laragon\www\laraigniter\resources\views\public\welcome.blade.php) C:\laragon\www\laraigniter\vendor\luthier\luthier\src\RouteBuilder.php 391
+ERROR - 2021-10-26 19:05:00 --> Severity: error --> Exception:  (View: C:\laragon\www\laraigniter\resources\views\public\welcome.blade.php) C:\laragon\www\laraigniter\vendor\luthier\luthier\src\RouteBuilder.php 391

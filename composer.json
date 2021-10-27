@@ -1,0 +1,46 @@
+{
+	"name": "lara-igniter/laraigniter",
+    "type": "project",
+    "description": "The Laraigniter Framework.",
+    "keywords": ["framework", "laraigniter"],
+    "license": "MIT",
+	"require": {
+		"php": "^7.2.5|^8.0",
+		"codeigniter/framework": "3.1.*",
+		"luthier/luthier": "^1.0",
+		"vlucas/phpdotenv": "4.1.8",
+		"xiaoler/blade": "^5.4",
+		"yidas/codeigniter-psr4-autoload": "^2.0"
+	},
+	"require-dev": {
+		"mikey179/vfsstream": "1.1.*",
+		"phpstan/phpstan": "^0.12.99"
+	},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+	"autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+		"post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    },
+	"extra": {
+        "laraigniter": {
+            "dont-discover": []
+        }
+    },
+	"config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+		"minimum-stability": "dev",
+		"prefer-stable": true
+    }
+}
