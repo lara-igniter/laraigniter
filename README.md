@@ -1,1 +1,1 @@
-﻿# laraigniter framework
+# laraigniter framework
