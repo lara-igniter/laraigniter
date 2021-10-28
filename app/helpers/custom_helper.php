@@ -238,40 +238,8 @@ if (! function_exists('redirect_url')) {
     function redirect_url()
     {
         $url = parse_url(current_url());
-        // dd($url);
+        
         ci()->session->set_userdata('redirect_url', $url['path']);
-    }
-}
-
-if (! function_exists('back')) {
-    function back(): Redirect
-    {
-        $redirect = new Redirect();
-        return $redirect->back();
-    }
-}
-
-if (! function_exists('redirectWith')) {
-    function redirectWith(array $data, string $key, string $value = null)
-    {
-        $redirect = new Redirect();
-        return $redirect->redirect($data)->with($key, $value);
-    }
-}
-
-if (! function_exists('backWith')) {
-    function backWith(string $key, string $value = null)
-    {
-        $redirect = new Redirect();
-        return $redirect->back()->with($key, $value);
-    }
-}
-
-if (! function_exists('jsonWith')) {
-    function jsonWith(array $data, string $key = null, string $value = null)
-    {
-        $redirect = new Redirect();
-        return $redirect->json($data)->withJson($key, $value);
     }
 }
 
