@@ -17,8 +17,6 @@ class MY_Controller extends \CI_Controller
             $url = parse_url(current_url());
 
             $this->session->set_userdata('prev_url', $url['path']);
-
-            redirect(route('auth.index'), 'refresh');
         }
     }
 }

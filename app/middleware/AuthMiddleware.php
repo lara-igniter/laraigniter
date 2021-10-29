@@ -12,7 +12,7 @@ class AuthMiddleware implements Luthier\MiddlewareInterface
     public function run($args)
     {
         if (!ci()->ion_auth->logged_in()) {
-            redirect(route('admin.auth.index'), 'refresh');
+            redirect(route('login'), 'refresh');
         }
     }
 }

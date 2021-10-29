@@ -28,7 +28,7 @@ Route::set('404_override', function () {
 
 Route::set('translate_uri_dashes', false);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index', ['middleware' => ['AuthMiddleware']])->name('home');
 
 Route::group('', ['namespace' => 'auth'], function() {
     Route::post('/logout', 'LogoutController@logout')->name('logout');
