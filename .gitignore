@@ -1,24 +1,18 @@
 .DS_Store
 
-/node_modules
-/vendor
+app/cache/*
+!app/cache/index.html
 
-application/cache/*
-!application/cache/index.html
+app/logs/*
+!app/logs/index.html
 
-application/logs/*
-!application/logs/index.html
-
-!application/*/.htaccess
+!app/*/.htaccess
 
 composer.lock
 package-lock.json
 
-user_guide_src/build/*
-user_guide_src/cilexer/build/*
-user_guide_src/cilexer/dist/*
-user_guide_src/cilexer/pycilexer.egg-info/*
-# /vendor/
+/node_modules
+/vendor
 
 # IDE Files
 #-------------------------
@@ -37,5 +31,8 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 
 .env
 
+## Phpunit test for laraigniter
+bin/build/*
+bin/xdebug-filter.php
 .phpunit.result.cache
 

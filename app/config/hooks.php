@@ -19,7 +19,7 @@
 //     'filepath' 	=> 'third_party/DevelBar/hooks'
 // );
 
-$hook = Luthier\Hook::getHooks();
+$hook = \Elegant\Routing\Hook::getHooks();
 
 /* End of file hooks.php */
 /* Location: ./application/config/hooks.php */

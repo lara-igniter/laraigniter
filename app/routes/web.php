@@ -17,6 +17,7 @@
  *    Route::get('blog/{slug}', 'blog@post');
  *      -> $route['blog/(:any)'] = 'blog/post/$1'
  */
+use Elegant\Routing\Facades\Route;
 
 Route::get('/', 'WelcomeController@index')->name('welcome');
 
