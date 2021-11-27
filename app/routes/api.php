@@ -1,5 +1,7 @@
 <?php
 
+use Elegant\Support\Facades\Route;
+
 /**
  * API Routes
  *

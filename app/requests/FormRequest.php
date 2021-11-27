@@ -31,9 +31,9 @@ abstract class FormRequest
     public function __construct(\CI_Form_validation $form_validation = null, \CI_Input $input = null)
     {
         if(!isset($form_validation)) {
-            ci()->load->library('form_validation');
-            $input = ci()->input;
-            $form_validation = ci()->form_validation;
+            app()->load->library('form_validation');
+            $input = app()->input;
+            $form_validation = app()->form_validation;
         }
 
         $form_validation->set_error_delimiters('<p style="color:red;">', '</p>');

@@ -71,7 +71,7 @@
         <div class="flex-center position-ref full-height">
 
             <div class="top-right links">
-                @if (ci()->ion_auth->logged_in())
+                @if (app()->ion_auth->logged_in())
                     <a href="{{ route('home') }}">{{ lang('dashboard') }}</a>
                 @else
                     <a href="{{ route('login') }}">{{ lang('login_submit_btn') }}</a>

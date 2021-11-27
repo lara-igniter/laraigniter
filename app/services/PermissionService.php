@@ -39,16 +39,16 @@ class PermissionService
 
     public static function permissions()
     {
-        ci()->load->model('permission');
+        app()->load->model('permission');
 
-        return ci()->permission->all()->toArray();
+        return app()->permission->all()->toArray();
     }
 
     public static function give(string $email, array $permissions)
     {
-        ci()->load->model('user');
+        app()->load->model('user');
 
-        $user = ci()->user->where('email', $email)->with_group(['with' => ['relation' => 'permissions']])->get();
+        $user = app()->user->where('email', $email)->with_group(['with' => ['relation' => 'permissions']])->get();
 
         $permissions = array_filter($permissions, function($permission) {
             return array_search($permission->key, array_column(self::permissions(), 'key'));
@@ -61,9 +61,9 @@ class PermissionService
 
     public static function revoke(string $email, array $permissions)
     {
-        ci()->load->model('user');
+        app()->load->model('user');
 
-        $user = ci()->user->where('email', $email)->with_group(['with' => ['relation' => 'permissions']])->get();
+        $user = app()->user->where('email', $email)->with_group(['with' => ['relation' => 'permissions']])->get();
 
         $permissions = array_filter(
             (array) $user->group->permissions,
@@ -92,20 +92,20 @@ class PermissionService
 
     private static function initTable()
     {
-        ci()->load->model('permission');
+        app()->load->model('permission');
 
-        ci()->db->query('SET foreign_key_checks = 0;');
+        app()->db->query('SET foreign_key_checks = 0;');
 
-        ci()->db->truncate('permissions');
+        app()->db->truncate('permissions');
 
-        ci()->db->query('SET foreign_key_checks = 1;');
+        app()->db->query('SET foreign_key_checks = 1;');
 
-        ci()->permission->insert(['key' => 'browse_admin']);
+        app()->permission->insert(['key' => 'browse_admin']);
     }
 
     private static function insertCrudPermission(string $model)
     {
-        ci()->load->model('permission');
+        app()->load->model('permission');
 
         $table = self::getTableName($model);
 
@@ -116,16 +116,16 @@ class PermissionService
                 'table_name' => $table,
             ];
 
-            ci()->permission->insert($data);
+            app()->permission->insert($data);
         }
     }
 
     private static function updatePermissionTable(int $group_id, array $permissions)
     {
-        ci()->db->delete('group_permission', ['group_id' => $group_id]);
+        app()->db->delete('group_permission', ['group_id' => $group_id]);
 
         foreach ($permissions as $permission) {
-            ci()->db->insert('group_permission', [
+            app()->db->insert('group_permission', [
                 'group_id' => $group_id,
                 'permission_id'  => $permission->id
             ]);

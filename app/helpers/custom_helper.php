@@ -56,7 +56,7 @@ if (! function_exists('csrf_token')) {
      */
     function csrf_token(): string
     {
-        return ci()->security->get_csrf_hash();
+        return app()->security->get_csrf_hash();
     }
 }
 
@@ -68,7 +68,7 @@ if (! function_exists('csrf_name')) {
      */
     function csrf_name() : string
     {
-        return ci()->security->get_csrf_token_name();
+        return app()->security->get_csrf_token_name();
     }
 }
 
@@ -187,8 +187,8 @@ if (! function_exists('query_string')) {
     {
         // set initial query string
         $query_string = array();
-        if ($include_current && ci()->input->get() !== false) {
-            $query_string = ci()->input->get();
+        if ($include_current && app()->input->get() !== false) {
+            $query_string = app()->input->get();
         }
 
         // add to query string
@@ -230,7 +230,7 @@ if (! function_exists('query_string')) {
 if (! function_exists('prev_url')) {
     function prev_url()
     {
-        return substr(ci()->session->userdata('prev_url'), 1);
+        return substr(app()->session->userdata('prev_url'), 1);
     }
 }
 
@@ -238,8 +238,8 @@ if (! function_exists('redirect_url')) {
     function redirect_url()
     {
         $url = parse_url(current_url());
-        
-        ci()->session->set_userdata('redirect_url', $url['path']);
+
+        app()->session->set_userdata('redirect_url', $url['path']);
     }
 }
 
@@ -277,13 +277,13 @@ if (! function_exists('set_select2')) {
 
 if (! function_exists('auth')) {
     function auth() {
-        return ci()->session->userdata('logged_user');
+        return app()->session->userdata('logged_user');
     }
 }
 
 if (! function_exists('loggedUser')) {
     function loggedUser() {
-        return ucfirst(ci()->session->userdata('logged_user')->first_name) . ' ' . ucfirst(ci()->session->userdata('logged_user')->last_name);
+        return ucfirst(app()->session->userdata('logged_user')->first_name) . ' ' . ucfirst(app()->session->userdata('logged_user')->last_name);
     }
 }
 if (! function_exists('title')) {

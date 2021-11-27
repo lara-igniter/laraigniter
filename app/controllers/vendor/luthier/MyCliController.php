@@ -124,37 +124,37 @@ MIGRATION;
             self::migrate();
 
             if($seeding == '--seed') {
-                ci()->seeder->call('DatabaseSeeder');
+                app()->seeder->call('DatabaseSeeder');
             }
 
             return;
         }
 
-        ci()->load->library('migration');
+        app()->load->library('migration');
 
-        $migrations = ci()->migration->find_migrations();
+        $migrations = app()->migration->find_migrations();
 
         $_migrationsTable = new \ReflectionProperty('CI_Migration', '_migration_table');
         $_migrationsTable->setAccessible(true);
-        $_migrationsTable = $_migrationsTable->getValue(ci()->migration);
+        $_migrationsTable = $_migrationsTable->getValue(app()->migration);
 
-        $old = ci()->db->get($_migrationsTable)->result()[0]->version;
+        $old = app()->db->get($_migrationsTable)->result()[0]->version;
 
         $migrate = function () use ($version) {
             if ($version === null) {
-                return ci()->migration->latest();
+                return app()->migration->latest();
             }
 
-            return ci()->migration->version($version);
+            return app()->migration->version($version);
         };
 
         $result = $migrate();
 
         if ($result === false) {
-            show_error(ci()->migration->error_string());
+            show_error(app()->migration->error_string());
         }
 
-        $current = ci()->db->get($_migrationsTable)->result()[0]->version;
+        $current = app()->db->get($_migrationsTable)->result()[0]->version;
 
         if ($old == $current) {
             echo "\nNothing to migrate. \n";

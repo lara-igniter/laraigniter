@@ -1,8 +1,8 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+use Elegant\Routing\Contracts\MiddlewareInterface;
 
-class AuthMiddleware implements Luthier\MiddlewareInterface
+class AuthMiddleware implements MiddlewareInterface
 {
     /**
      * Middleware entry point
@@ -11,7 +11,7 @@ class AuthMiddleware implements Luthier\MiddlewareInterface
      */
     public function run($args)
     {
-        if (!ci()->ion_auth->logged_in()) {
+        if (!app()->ion_auth->logged_in()) {
             redirect(route('login'), 'refresh');
         }
     }

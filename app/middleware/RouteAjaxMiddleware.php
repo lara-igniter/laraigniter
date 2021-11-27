@@ -1,8 +1,8 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+use Elegant\Routing\Contracts\MiddlewareInterface;
 
-class RouteAjaxMiddleware implements Luthier\MiddlewareInterface
+class RouteAjaxMiddleware implements MiddlewareInterface
 {
 
     /**
@@ -12,8 +12,7 @@ class RouteAjaxMiddleware implements Luthier\MiddlewareInterface
      */
     public function run($args = [])
     {
-        if(!ci()->input->is_ajax_request())
-        {
+        if(!app()->input->is_ajax_request()) {
             trigger_404();
         }
     }

@@ -22,6 +22,9 @@ class AuthController extends MY_Controller
         $this->blade->view('auth.login');
     }
 
+    /**
+     * @throws Exception
+     */
     public function login()
     {
         $url = substr($this->session->userdata('prev_url'), 1);
