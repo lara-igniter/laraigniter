@@ -1,38 +1,17 @@
 .DS_Store
 
-app/cache/*
-!app/cache/index.html
-
-app/logs/*
-!app/logs/index.html
-
-!app/*/.htaccess
-
-composer.lock
-package-lock.json
-
 /node_modules
 /vendor
 
-# IDE Files
-#-------------------------
 /nbproject/
 .idea/*
 .vscode/*
 
-## Sublime Text cache files
-*.tmlanguage.cache
-*.tmPreferences.cache
-*.stTheme.cache
-*.sublime-workspace
-*.sublime-project
 /tests/tests/
 /tests/results/
-
-.env
-
-## Phpunit test for laraigniter
-bin/build/*
-bin/xdebug-filter.php
 .phpunit.result.cache
+.env
+composer.lock
+package-lock.json
+
 
