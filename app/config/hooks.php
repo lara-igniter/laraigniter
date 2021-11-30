@@ -1,5 +1,8 @@
 <?php
 
-use Elegant\Foundation\Hooks\RouteHooks;
+use Elegant\Foundation\Hooks\Hook;
 
-$hook = RouteHooks::load();
+$hook = Hook::autoload([
+    'whoops' => Elegant\Foundation\Hooks\Whoops::class,
+    'route' => Elegant\Foundation\Hooks\Routing::class,
+]);
