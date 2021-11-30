@@ -4,6 +4,12 @@
     "description": "The Laraigniter Framework.",
     "keywords": ["framework", "laraigniter"],
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/lara-igniter/framework"
+        }
+    ],
 	"require": {
 		"php": "^7.2.5|^8.0",
 		"lara-igniter/framework": "dev-master",
@@ -12,6 +18,7 @@
 		"yidas/codeigniter-psr4-autoload": "^2.0"
 	},
 	"require-dev": {
+		"filp/whoops": "^2.14",
 		"mikey179/vfsstream": "1.1.*"
 	},
     "autoload": {
