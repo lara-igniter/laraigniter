@@ -12,8 +12,6 @@
     ],
 	"require": {
 		"php": "^7.2.5|^8.0",
-		"lara-igniter/framework": "dev-master",
-		"vlucas/phpdotenv": "4.1.8",
 		"xiaoler/blade": "^5.4",
 		"yidas/codeigniter-psr4-autoload": "^2.0"
 	},

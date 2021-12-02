@@ -1,6 +1,7 @@
 <?php
-require '../vendor/autoload.php';
-use Dotenv\Dotenv;
 
-$dotenv = Dotenv::createMutable('../');
-$dotenv->load();
+$app = new Elegant\Foundation\Application(
+    $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
+);
+
+return $app;
