@@ -19,7 +19,7 @@ class AuthController extends MY_Controller
     }
 
     public function index() {
-        $this->blade->view('auth.login');
+        view('auth.login');
     }
 
     /**
