@@ -73,7 +73,6 @@ $autoload['libraries'] = array(
 
     // Custom libraries
     'Seeder',
-    'Blade',
     'console',
 );
 
