@@ -8,6 +8,7 @@ $hook = Hook::autoload([
         /*
          * Laraigniter Framework Service Providers...
          */
+        Elegant\Foundation\AppServiceProvider::class,
         Elegant\Routing\RouteServiceProvider::class,
         Elegant\Foundation\Exceptions\WhoopsServiceProvider::class,
         Elegant\View\ViewServiceProvider::class,
@@ -20,6 +21,7 @@ $hook = Hook::autoload([
     ],
 
     'aliases' => [
-        'blade' => Elegant\Support\Facades\Blade::class,
+        'Blade' => Elegant\Support\Facades\Blade::class,
+        'View' => Elegant\Support\Facades\View::class,
     ]
 ]);
