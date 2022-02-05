@@ -1,5 +1,7 @@
 <?php
 
+defined('BASEPATH') or exit('No direct script access allowed');
+
 /**
  * Laraigniter default controller - DO NOT EDIT OR REMOVE THIS FILE!
  *
@@ -8,7 +10,10 @@
  * the CI_Router class.
  */
 
-class Controller extends CI_Controller
+class Controller extends \CI_Controller
 {
-
+    public function index()
+    {
+        //
+    }
 }
