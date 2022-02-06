@@ -5,7 +5,7 @@
     "keywords": ["framework", "laraigniter"],
     "license": "MIT",
 	"require": {
-		"php": "^7.2.5|^8.0",
+        "php": "^7.3|^8.0",
 		"lara-igniter/framework": "^1.0",
 		"yidas/codeigniter-psr4-autoload": "^2.0"
 	},
