@@ -1,8 +1,8 @@
 <?php
 
-use Elegant\Foundation\Hooks\Hook;
+use Elegant\Foundation\Hooks;
 
-$hook = Hook::autoload([
+$hook = Hooks::autoload([
     'providers' => [
 
         /*

@@ -2,10 +2,10 @@
 
 namespace App\Providers;
 
-use Elegant\Foundation\Hooks\Contracts\PostControllerConstructorHookInterface;
+use Elegant\Contracts\Hook\PostControllerConstructor;
 use Elegant\Support\Facades\Blade;
 
-class ViewServiceProvider implements PostControllerConstructorHookInterface
+class ViewServiceProvider implements PostControllerConstructor
 {
     public function postControllerConstructorHook(&$params)
     {
