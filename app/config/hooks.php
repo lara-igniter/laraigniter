@@ -17,7 +17,8 @@ $hook = Hooks::autoload([
         /*
          * Application Service Providers...
          */
-        App\Providers\ViewServiceProvider::class
+        App\Providers\AppServiceProvider::class,
+        App\Providers\ViewServiceProvider::class,
     ],
 
     'aliases' => [

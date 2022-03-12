@@ -9,8 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
-        "lara-igniter/framework": "^1.0",
-        "yidas/codeigniter-psr4-autoload": "^2.0"
+        "lara-igniter/framework": "^1.0"
     },
     "require-dev": {
         "filp/whoops": "^2.14",
