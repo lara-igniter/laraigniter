@@ -10,7 +10,7 @@ Route::set('404_override', function () {
 
 Route::set('translate_uri_dashes', false);
 
-Route::get('/home', 'HomeController@index', ['middleware' => ['AuthMiddleware']])->name('home');
+Route::get('/home', 'HomeController@index', ['middleware' => ['auth']])->name('home');
 
 Route::group('', ['namespace' => 'auth'], function() {
     Route::post('/logout', 'LogoutController@logout')->name('logout');
@@ -23,6 +23,6 @@ Route::group('', ['namespace' => 'auth'], function() {
 //    });
 });
 
-Route::group('phpdebugbar', ['namespace' => 'vendor/maximebf', 'middleware' => ['AuthMiddleware','RouteAjaxMiddleware']], function(){
-	Route::get('/open_handler', 'PHPDebugBar@open_handler')->name('phpdebugbar.open_handler');
+Route::group('phpdebugbar', ['namespace' => 'vendor/maximebf', 'middleware' => ['auth']], function () {
+    Route::get('/open_handler', 'PHPDebugBar@open_handler')->name('phpdebugbar.open_handler');
 });
