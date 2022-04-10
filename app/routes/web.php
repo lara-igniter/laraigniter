@@ -16,11 +16,6 @@ Route::group('', ['namespace' => 'auth'], function() {
     Route::post('/logout', 'LogoutController@logout')->name('logout');
     Route::get('/login', 'AuthController@index')->name('login');
     Route::post('/login', 'AuthController@login');
-
-//    Route::group('password', ['namespace' => 'password'], function() {
-//        Route::get('/reset', 'PasswordController@forgot')->name('admin.auth.password.forgot');
-//        Route::post('/reset', 'PasswordController@reset')->name('admin.auth.password.reset');
-//    });
 });
 
 Route::group('phpdebugbar', ['namespace' => 'vendor/maximebf', 'middleware' => ['auth']], function () {
