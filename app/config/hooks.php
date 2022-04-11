@@ -13,6 +13,9 @@ $hook = Hooks::autoload([
         Elegant\Foundation\Exceptions\WhoopsServiceProvider::class,
         Elegant\View\ViewServiceProvider::class,
 
+        /*
+         * Package Service Providers...
+         */
 
         /*
          * Application Service Providers...
